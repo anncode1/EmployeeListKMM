@@ -35,6 +35,7 @@ kotlin {
             implementation(compose.materialIconsExtended)
 
             implementation(project(":koindi"))
+            implementation(project(":domain"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
