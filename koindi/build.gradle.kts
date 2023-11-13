@@ -28,6 +28,8 @@ kotlin {
             //put your multiplatform dependencies here
             implementation(libs.koin.core)
             implementation(project(":data"))
+            implementation(project(":domain"))
+            implementation(project(":presentation"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

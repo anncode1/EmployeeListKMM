@@ -173,7 +173,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :presentation:embedAndSignAppleFrameworkForXcode\n./gradlew :koindi:embedAndSignAppleFrameworkForXcode\n";
+			shellScript = "cd \"$SRCROOT/..\"\n./gradlew :koindi:embedAndSignAppleFrameworkForXcode\n./gradlew :presentation:embedAndSignAppleFrameworkForXcode\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -327,7 +327,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-                    "-l\"c++\"",
+					"-l\"c++\"",
 					"-framework",
 					presentation,
 				);
@@ -359,7 +359,7 @@
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
-                    "-l\"c++\"",
+					"-l\"c++\"",
 					"-framework",
 					presentation,
 				);
