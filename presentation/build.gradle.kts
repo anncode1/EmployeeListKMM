@@ -33,6 +33,8 @@ kotlin {
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
             implementation(compose.materialIconsExtended)
+
+            implementation(project(":koindi"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

@@ -19,7 +19,7 @@ kotlin {
     ).forEach {
         it.binaries.framework {
             baseName = "koindi"
-            isStatic = true
+            isStatic = false
         }
     }
 
