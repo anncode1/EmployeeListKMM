@@ -18,7 +18,7 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "data"
+            baseName = "domain"
             isStatic = true
         }
     }
@@ -26,31 +26,16 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation(libs.ktor.client.core)
-            implementation(libs.ktor.serialization)
-            implementation(libs.ktor.negotiation)
             implementation(libs.kotlinx.datetime)
-            implementation(libs.koin.core)
-
-            implementation(project(":domain"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
-
-        androidMain.dependencies {
-            implementation(libs.ktor.client.okhttp)
-        }
-
-        iosMain.dependencies {
-            implementation(libs.ktor.client.darwin)
-        }
-
     }
 }
 
 android {
-    namespace = "com.anncode.data"
+    namespace = "com.anncode.domain"
     compileSdk = 34
     defaultConfig {
         minSdk = 24

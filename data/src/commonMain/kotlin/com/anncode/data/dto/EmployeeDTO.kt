@@ -1,5 +1,6 @@
 package com.anncode.data.dto
 
+import com.anncode.domain.model.Employee
 import kotlinx.datetime.LocalDateTime
 import kotlinx.serialization.Serializable
 
@@ -14,3 +15,9 @@ data class EmployeeDTO(
     val salary: Double,
     val startDate: LocalDateTime
 )
+
+fun EmployeeDTO.toEmployee(): Employee {
+    return Employee(
+        id, name, email, phone, age, isEmployed, salary, startDate
+    )
+}
