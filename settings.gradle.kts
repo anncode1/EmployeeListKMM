@@ -18,3 +18,4 @@ dependencyResolutionManagement {
 rootProject.name = "EmployeeListKMM"
 include(":androidApp")
 include(":presentation")
+include(":data")
