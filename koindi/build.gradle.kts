@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
-    alias(libs.plugins.composeMultiplatform)
 }
 
 kotlin {
@@ -19,22 +18,16 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "presentation"
-            isStatic = true
+            baseName = "koindi"
+            isStatic = false
         }
     }
 
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation(compose.runtime)
-            implementation(compose.foundation)
-            implementation(compose.material3)
-            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-            implementation(compose.components.resources)
-            implementation(compose.materialIconsExtended)
-
-            implementation(project(":koindi"))
+            implementation(libs.koin.core)
+            implementation(project(":data"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -43,12 +36,9 @@ kotlin {
 }
 
 android {
-    namespace = "com.anncode.employeelistkmm"
+    namespace = "com.anncode.koindi"
     compileSdk = 34
     defaultConfig {
         minSdk = 24
     }
-}
-dependencies {
-    implementation("androidx.core:core-ktx:+")
 }

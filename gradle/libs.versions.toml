@@ -8,6 +8,7 @@ androidx-activityCompose = "1.8.0"
 compose-multiplatform = "1.5.10"
 kotlinxDatetime = "0.4.1"
 ktor = "2.3.6"
+koin = "3.5.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -26,7 +27,10 @@ ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "kto
 ktor-serialization = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
 ktor-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
 
-
+#KOIN
+koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin"}
+koin-android = { module = "io.insert-koin:koin-android", version.ref = "koin"}
+koin-android-compose = { module = "io.insert-koin:koin-androidx-compose", version.ref = "koin"}
 
 
 

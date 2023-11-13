@@ -30,6 +30,7 @@ kotlin {
             implementation(libs.ktor.serialization)
             implementation(libs.ktor.negotiation)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.koin.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
