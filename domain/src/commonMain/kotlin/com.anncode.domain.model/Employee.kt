@@ -10,5 +10,5 @@ data class Employee(
     val age: Int,
     val isEmployed: Boolean,
     val salary: Double,
-    val startDate: LocalDateTime
+    //val startDate: LocalDateTime
 )

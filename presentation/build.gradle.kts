@@ -34,11 +34,17 @@ kotlin {
             implementation(compose.components.resources)
             implementation(compose.materialIconsExtended)
 
-            implementation(project(":koindi"))
+            implementation(libs.koin.core)
+
             implementation(project(":domain"))
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+
+        androidMain.dependencies {
+            implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.viewmodel)
         }
     }
 }

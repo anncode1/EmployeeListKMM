@@ -14,8 +14,12 @@ class EmployeeRepositoryImpl(
     override suspend fun getEmployees(): Result<List<Employee>> {
         val response = api.request(MockEmployeeService.getEmployeesRequest())
         val result = responseMapper.map(response)
+
         return result.map {
-            it.map {  employeeDto -> employeeDto.toEmployee() }
-        }
+            it.employeesDTO.map {
+                    employeeDTO -> employeeDTO.toEmployee()
+                }
+            }
     }
+
 }

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -31,6 +32,7 @@ kotlin {
             implementation(libs.ktor.negotiation)
             implementation(libs.kotlinx.datetime)
             implementation(libs.koin.core)
+            implementation(libs.kotlin.serialization)
 
             implementation(project(":domain"))
         }
