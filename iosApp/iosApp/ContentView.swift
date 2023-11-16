@@ -1,9 +1,15 @@
 import SwiftUI
 import presentation
 
+//typealias KoindiKoin = koindi.Koin_coreKoin
+//typealias PresentationKoin = presentation.Koin_coreKoin
+
 struct ComposeView: UIViewControllerRepresentable {
+
+
     func makeUIViewController(context: Context) -> UIViewController {
-        Main_iosKt.MainViewController()
+
+       Main_iosKt.MainViewController()
 
     }
 

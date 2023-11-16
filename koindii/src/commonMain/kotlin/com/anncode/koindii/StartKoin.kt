@@ -1,4 +1,4 @@
-package com.anncode.koindi
+package com.anncode.koindii
 
 import com.anncode.data.di.dataModule
 import com.anncode.domain.di.useCaseModule

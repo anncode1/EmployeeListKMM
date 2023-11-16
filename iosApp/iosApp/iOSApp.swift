@@ -4,12 +4,15 @@ import koindi
 @main
 struct iOSApp: App {
     
+     
+    
     init() {
-        StartKoinKt.doInitKoin()
+        //StartKoinKt.doInitKoin()
     }
     
 	var body: some Scene {
 		WindowGroup {
+            
 			ContentView()
 		}
 	}
