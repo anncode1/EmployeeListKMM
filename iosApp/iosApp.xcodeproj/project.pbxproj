@@ -361,6 +361,7 @@
 					"$(inherited)",
 					"$(SRCROOT)/../koindii/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 					"$(SRCROOT)/../presentation/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
+					"$(SRCROOT)/../koindi/build/xcode-frameworks/$(CONFIGURATION)/$(SDK_NAME)",
 				);
 				INFOPLIST_FILE = iosApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
@@ -373,6 +374,7 @@
 					"-ObjC",
 					"-l\"c++\"",
 					"-framework",
+					koindi,
 					presentation,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
@@ -407,6 +409,7 @@
 					"-ObjC",
 					"-l\"c++\"",
 					"-framework",
+					koindi,
 					presentation,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = orgIdentifier.iosApp;
