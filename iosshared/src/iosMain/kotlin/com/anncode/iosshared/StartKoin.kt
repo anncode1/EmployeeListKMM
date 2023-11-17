@@ -1,4 +1,4 @@
-package com.anncode.koindi
+package com.anncode.iosshared
 
 import com.anncode.data.di.dataModule
 import com.anncode.domain.di.useCaseModule
@@ -6,9 +6,8 @@ import com.anncode.employeelistkmm.di.presentationModule
 import org.koin.core.context.startKoin
 import org.koin.dsl.KoinAppDeclaration
 
-fun initKoin(appDeclaration: KoinAppDeclaration = {}) =
+fun initKoin() =
     startKoin {
-        appDeclaration()
         modules(
             useCaseModule(),
             dataModule(),
@@ -17,5 +16,3 @@ fun initKoin(appDeclaration: KoinAppDeclaration = {}) =
     }
 
 
-// helper function to call koin from swift code
-fun initKoin() = initKoin {  }

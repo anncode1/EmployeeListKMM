@@ -5,7 +5,7 @@ import org.koin.core.component.KoinComponent
 import org.koin.dsl.module
 
 fun presentationModule() = module {
-    single { EmployeesViewModel(get()) }
+    single<EmployeesViewModel> { EmployeesViewModel(get()) }
 }
 
 object KotlinDependencies : KoinComponent {

@@ -19,22 +19,22 @@ kotlin {
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
-            baseName = "koindi"
+            baseName = "iosshared"
             isStatic = true
             export(project(":data"))
             export(project(":domain"))
             export(project(":presentation"))
+            export(project(":koindi"))
         }
     }
 
     sourceSets {
         commonMain.dependencies {
             //put your multiplatform dependencies here
-            implementation(libs.koin.core)
             api(project(":data"))
             api(project(":domain"))
             api(project(":presentation"))
-
+            api(project(":koindi"))
 
             implementation(compose.runtime)
             implementation(compose.foundation)
@@ -42,6 +42,8 @@ kotlin {
             @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
             implementation(compose.components.resources)
             implementation(compose.materialIconsExtended)
+
+            implementation(libs.koin.core)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -50,7 +52,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.anncode.koindi"
+    namespace = "com.anncode.iosshared"
     compileSdk = 34
     defaultConfig {
         minSdk = 24
